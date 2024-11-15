@@ -18,7 +18,7 @@
    - 9.2 [Sprint 1](#92-sprint-1)
 
 # **1. Introduzione** 
-![Immagine Ataxx](img/img_ataxx.png)
+![Immagine Ataxx](docs/img/img_ataxx.png)
 
 ### Gruppo **_Codd_**
 Costituito dagli studenti: _Bitetti Andrea, Castellano Leoluca, Di Pietro Claudio, Fallucca Giuseppe Pio, Franco Andrea, Gatti Giovanni_.
