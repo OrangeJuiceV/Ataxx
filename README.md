@@ -67,7 +67,7 @@ Di seguito viene presentato il modello di dominio del gioco _Ataxx_.
 Tale modello è utile per comprendere e comunicare i concetti
 fondamentali di un ambito. E’ indipendente dal software ed è sviluppato mediante un diagramma delle classi con prospettiva concettuale.
 
-![Modello di dominio](img/modello_dominio.png)
+![Modello di dominio](docs/img/modello_dominio.png)
 
 # **3. Requisiti specifici**
 I requisiti specifici analizzano una particolare caratteristica o funzionalità richiesta per l'applicazione, ed esplicitano 'cosa' l'applicazione deve avere, senza dire 'come' una funzionalità verrà implementata.
@@ -218,19 +218,19 @@ La struttura del sistema è gestita in più package e sottopackage.
 
 Partendo dal livello più alto, il package _main/java/it/uniba/app_ contenuto nella cartella src della repository contiene il codice del gioco _Ataxx_. In figura la rappresentazione:
 
-![Diagramma livello alto](img/astrazione_alto.png)
+![Diagramma livello alto](docs/img/astrazione_alto.png)
 
 Scendendo di livello troviamo i package che contengono le classi necessarie al funzionamento del gioco, divisi in base a necessità, quali ordine, logica del gioco e migliore implementazione di quest'ultimo:
 
-![Diagramma livello alto](img/astrazione.png)
+![Diagramma livello alto](docs/img/astrazione.png)
 
 Il diagramma dei package completo è il seguente:
 
-![Diagramma dei package](img/diagramma_package.png)
+![Diagramma dei package](docs/img/diagramma_package.png)
 
 ### Diagramma dei componenti
 
-![Diagramma dei componenti](img/diagramma_componenti.png)
+![Diagramma dei componenti](docs/img/diagramma_componenti.png)
 
 ### Commento sulle decisioni prese
 Lo stile architetturale da noi adottato è l'ECB (Entity-Control-Boundary). Si è deciso di adottare questo stile poichè gode di  innumerevoli vantaggi come la separazione ben definita delle responsabilità fra classi Entity (manipolazione dei dati), Boundary (grafica)  e Control (interazioni tra i due sottosistemi).
@@ -243,29 +243,29 @@ Si è deciso di analizzare dettagliamente tutte le user story e definire quali c
 ### FR2: Come giocatore voglio iniziare una nuova partita
 Diagramma delle classi:
 
-![Diagramma delle classi FR2](img/diagramma_classi_1.png)
+![Diagramma delle classi FR2](docs/img/diagramma_classi_1.png)
 
 Diagramma di sequenza:
 
-![Diagramma di sequenza FR2](img/diagramma_sequenza_1.png)
+![Diagramma di sequenza FR2](docs/img/diagramma_sequenza_1.png)
 
 ### FR7: Come giocatore voglio chiudere il gioco  
 Diagramma delle classi:
 
-![Diagramma delle classi FR7](img/diagramma_classi_2.png)
+![Diagramma delle classi FR7](docs/img/diagramma_classi_2.png)
 
 Diagramma di sequenza:
 
-![Diagramma di sequenza FR7](img/diagramma_sequenza_2.png)
+![Diagramma di sequenza FR7](docs/img/diagramma_sequenza_2.png)
 
 ### FR15: Come giocatore voglio impostare caselle non accessibili
 Diagramma delle classi:
 
-![Diagramma delle classi FR8](img/diagramma_classi_3.png)
+![Diagramma delle classi FR8](docs/img/diagramma_classi_3.png)
 
 Diagramma di sequenza:
 
-![Diagramma di sequenza FR8](img/diagramma_sequenza_3.png)
+![Diagramma di sequenza FR8](docs/img/diagramma_sequenza_3.png)
 
 Le scelte sono state effettuate seguendo i principi dell'OO Design.
 ### Principi OO Design
@@ -318,7 +318,7 @@ CheckStyle e PMD sono framework che abbiamo implementato nel nostro IDE, in part
 
 **Spotbugs**
 
-   ![Test Spotbugs](img/spotbugs.png)
+   ![Test Spotbugs](docs/img/spotbugs.png)
 
 ## Processo dinamico
 Riguardo il processo dinamico, in seguito vengono mostrati i risultati dei test effettuati sui metodi.
@@ -327,23 +327,23 @@ Riguardo il processo dinamico, in seguito vengono mostrati i risultati dei test 
 
 Sono stati effettuati casi di test su tutti i metodi, con parametri ed oggetti differenti. Alleghiamo il sommario:
 
-![Sommario test JUnit](img/test_suite.png)
+![Sommario test JUnit](docs/img/test_suite.png)
 
 In particolare per ogni test suite, sono stati effettuati test su tutti i metodi:
 
-![Test App e Cella](img/test_app_cella.png)
+![Test App e Cella](docs/img/test_app_cella.png)
 
-![Test Comandi](img/test_comandi.png)
+![Test Comandi](docs/img/test_comandi.png)
 
-![Test cronometro](img/test_cronometro.png) 
+![Test cronometro](docs/img/test_cronometro.png) 
 
-![Test giocatore](img/test_giocatore.png) 
+![Test giocatore](docs/img/test_giocatore.png) 
 
-![Test stampe](img/test_stampe.png)
+![Test stampe](docs/img/test_stampe.png)
 
-![Test tastiera](img/test_tastiera.png) 
+![Test tastiera](docs/img/test_tastiera.png) 
 
-![Test tavoliere](img/test_tavoliere.png)
+![Test tavoliere](docs/img/test_tavoliere.png)
 
 ### Cenni sul testing con JUnit5
 Per le classi di tipo Entity e Control, è stati adottato il criteri di tipo black box. Per ciascun metodo, il dominio dei dati in ingresso è stato suddiviso in classi di equivalenza e sono stati scelti valori appropriati per ciascuna classe. Per le classi boundary, non sono stati eseguiti test.
@@ -380,7 +380,7 @@ La griglia di gioco è costituita da celle di colore bianco e nero alternato, ta
     All'avvio del programma, al giocatore gli viene suggerito di digitare il comando **__/help__** (o invocando l'app con flag **_-help_** o **_-h_**.) per visualizzare i comandi disponibili.
     Tale comando può essere richiamato in qualsiasi momento di gioco.
 
-    ![Comando help](img/comando_help.png)
+    ![Comando help](docs/img/comando_help.png)
 
 - ### **Iniziare una partita**
     Per iniziare la partita, digitare il comando **_/gioca_**. 
@@ -388,17 +388,17 @@ La griglia di gioco è costituita da celle di colore bianco e nero alternato, ta
     Ora è possibile effettuare le mosse e provare a vincere la partita.
     Quando sullo schermo compare la griglia vuota con le pedine in posizione iniziale, come in figura, si predispone a ricevere la prima mossa di gioco del nero o altri comandi.
 
-    ![Comando gioca](img/comando_gioca.png)
+    ![Comando gioca](docs/img/comando_gioca.png)
 
 - ### **Visualizzare il tavoliere vuoto con la numerazione**
     Per visualizzare il tavoliere vuoto di 49 caselle quadrate (7 per lato) con le righe numerate da 1 a 7 e le colonne numerate da ‘a’ a ‘g’, digitare il comando **_/vuoto_**.
 
-    ![Comando vuoto](img/comando_vuoto.png)
+    ![Comando vuoto](docs/img/comando_vuoto.png)
 
 - ### **Visualizzare il tavoliere con le pedine e la numerazione**
     Digitando il comando **_/tavoliere_** sarà possibile, se il gioco è iniziato, visualizzare la posizione di tutte le pedine sul tavoliere (come in figura).
 
-    ![Comando tavoliere](img/comando_tavoliere.png)
+    ![Comando tavoliere](docs/img/comando_tavoliere.png)
 
 - ### **Visualizzare le mosse possibili di una pedina**
     Se il gioco è iniziato, digitando il comando **_/qualimosse_**, è possibile vedere quali mosse sono disponibili per il giocatore di turno.
@@ -408,7 +408,7 @@ La griglia di gioco è costituita da celle di colore bianco e nero alternato, ta
     2. in arancione mosse che consentono un salto
     3. in viola le caselle raggiungibili con mosse di tipo 1. o 2.
 
-    ![Comando qualimosse](img/comando_qualimosse.png)
+    ![Comando qualimosse](docs/img/comando_qualimosse.png)
 
 - ### **Vincere una partita**
     La vittoria della partita è possibile in due distinti casi:
@@ -420,19 +420,19 @@ La griglia di gioco è costituita da celle di colore bianco e nero alternato, ta
     A partita in corso, l'utente può spostare una propria pedina in una casella adiacente, in senso ortogonale e diagonale.
     Utilizzare la notazione algebra del tipo: a1-a2, dove a1 è la casella di partenza e a2 è la casella adiacente.
 
-    ![Comando adiacente](img/comando_adiacente.png)
+    ![Comando adiacente](docs/img/comando_adiacente.png)
 
 - ### **Spostare una propria pedina saltando una casella adiacente**
     A partita in corso, l'utente può spostare una propria pedina in unacasella non adiacente, saltandola.
     Utilizzare la notazione algebra del tipo: a1-a3, dove a1 è la casella di partenza e a3 è la casella adiacente.
     La casella di arrivo deve essere libera e non deve essere adiacente alla casella originaria. La casella saltata può anche essere occupata da una propria pedina o da una pedina avversaria.
     
-    ![Comando adiacente](img/comando_salta.png)
+    ![Comando adiacente](docs/img/comando_salta.png)
 
 - ### **Mostrare le mosse giocate**
     E' possibile visualizzare la storia delle mosse effettuate utilizzando il comando /mosse. L'utente visualizza la seguente grafica.
 
-    ![Comando mosse](img/comando_mosse.png)
+    ![Comando mosse](docs/img/comando_mosse.png)
 
 - ### **Passare il turno per impossibilità di movimento**
     Se il giocatore non può muovere nessuna pedina del proprio colore, l’app avvisa che il turno passa all’altro colore
@@ -440,7 +440,7 @@ La griglia di gioco è costituita da celle di colore bianco e nero alternato, ta
 - ### **Mostrare il tempo di gioco**   
     Utilizzando il comando /tempo, l'app mostra il tempo trascorso dall’inizio partita nel formato ore:minuti:secondi.
 
-    ![Comando tempo](img/comando_tempo.png)
+    ![Comando tempo](docs/img/comando_tempo.png)
 
 - ### **Impostare caselle non accessibili**
     A partita non in corso, l'utente può bloccare alcune caselle, rendendole inaccessibili da entrambi i giocatori.
@@ -451,7 +451,7 @@ La griglia di gioco è costituita da celle di colore bianco e nero alternato, ta
 
     Non è possibile bloccare più di 9 caselle.
     
-    ![Comando blocca](img/comando_blocca.png)
+    ![Comando blocca](docs/img/comando_blocca.png)
 
 - ### **Abbandonare una partita**
     Qualora si volesse abbandonare una partita, digitare il comando **_/abbandona_**.
@@ -461,7 +461,7 @@ La griglia di gioco è costituita da celle di colore bianco e nero alternato, ta
 
     Se la conferma è negativa, l'app si predispone a ricevere nuovi tentativi o comandi.
 
-    ![comando_abbandona](img/comando_abbandona.png)
+    ![comando_abbandona](docs/img/comando_abbandona.png)
 
 - ### **Uscire da una partita**
     Qualora si volesse abbandonare una partita, digitare il comando **_/abbandona_**.
@@ -471,7 +471,7 @@ La griglia di gioco è costituita da celle di colore bianco e nero alternato, ta
 
     Se la conferma è negativa, l'app si predispone a ricevere nuovi tentativi o comandi.
 
-    ![comando_esci](img/comando_esci.png)
+    ![comando_esci](docs/img/comando_esci.png)
 
 ### Buon divertimento... e che vinca il migliore!
 
@@ -505,7 +505,7 @@ Una volta approvata la Pull Request, il branch dell'issue viene unito al branch 
 ### Tempi di lavoro
 La seguente tabella ha il compito di analizzare i tempi di lavoro previsti da calendario per ogni Sprint:
 
-![Tempi di lavoro](img/tempi_lavoro.png)
+![Tempi di lavoro](docs/img/tempi_lavoro.png)
 
 ### Organizzazione del Lavoro
 Per coordinare il lavoro, comunicare ed effettuare i meeting, il gruppo ha utilizzato diverse piattaforme (in particolare Whatsapp e Discord). Questi strumenti hanno facilitato la condivisione di file, immagini e documentazione, nonché la discussione dei problemi incontrati durante lo sviluppo.
@@ -555,7 +555,7 @@ Il giorno successivo ad ogni review dello Sprint, abbiamo effettuato un meeting 
 ## **9.1 Sprint 0**
 Il modello Retrospettiva **_"Arrabbiato, triste, felice"_** dello _Sprint 0_ è il seguente:
 
-![Analisi retrospettiva - Sprint 0](img/restrospettiva_sprint0.png)
+![Analisi retrospettiva - Sprint 0](docs/img/restrospettiva_sprint0.png)
 
 Durante l'analisi retrospettiva dello Sprint 0, abbiamo stilato un elenco delle azioni correttive da intrapendere, scaturito dalla discussione avvenuta precedentemente:
 
@@ -570,7 +570,7 @@ Durante l'analisi retrospettiva dello Sprint 0, abbiamo stilato un elenco delle 
 ## **9.2 Sprint 1**
 Il modello Retrospettiva **_"Arrabbiato, triste, felice"_** dello _Sprint 1_ è il seguente:
 
-![Analisi retrospettiva - Sprint 1](img/restrospettiva_sprint1.png)
+![Analisi retrospettiva - Sprint 1](docs/img/restrospettiva_sprint1.png)
 
 Durante l'analisi retrospettiva dello Sprint 1, abbiamo stilato un elenco delle azioni correttive da intrapendere, scaturito dalla discussione avvenuta precedentemente:
 
